@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button bNewGroup, bLogout;
     EditText etSearch;
+    UserLocalStore userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +32,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bLogout.setOnClickListener(this);
         bNewGroup.setOnClickListener(this);
+
+        userLocalStore = new UserLocalStore(this);
     }
+
+    /* Authenticate User */
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        if (authenticate() == true){
+            displayUserGroup();
+        }
+
+    }
+
+    private boolean authenticate(){
+        return userLocalStore.getUserLoggedIn();
+    }
+
+    private void displayUserGroup(){
+        /* code to display group list here */
+    }
+
 
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.bLogout:
+                userLocalStore.clearUserData();
+                userLocalStore.setUserLoggedIn(false);
+
                 startActivity(new Intent(this, login.class));
 
                 break;
