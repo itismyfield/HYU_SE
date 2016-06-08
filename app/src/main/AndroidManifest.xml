@@ -33,6 +33,10 @@
         <activity
             android:name=".make_group_2"
             android:label="@string/title_activity_make_group_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".group_profile"
+            android:label="@string/title_activity_group_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
