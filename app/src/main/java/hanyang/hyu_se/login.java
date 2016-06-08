@@ -1,17 +1,20 @@
 package hanyang.hyu_se;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class login extends AppCompatActivity implements View.OnClickListener{
 
     Button bLogin, bJoin;
     EditText etUsername, etPassword;
+    UserLocalStore userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +31,22 @@ public class login extends AppCompatActivity implements View.OnClickListener{
         bLogin.setOnClickListener(this);
         bJoin.setOnClickListener(this);
 
+        userLocalStore = new UserLocalStore(this);
+
     }
 
     @Override
     public void onClick(View v) {
-        switch(v.getID()){
+        switch(v.getId()){
             case R.id.bLogin:
+                User user = new User(null, null);
 
+                userLocalStore.storeUserData(user);
+                userLocalStore.setUserLoggedIn(true);
 
                 break;
             case R.id.bJoin:
-                startActivity(new Intent(this, Register.class));
+                startActivity(new Intent(this, register.class));
 
                 break;
         }
