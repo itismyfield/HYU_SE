@@ -41,6 +41,10 @@
         <activity
             android:name=".group_home"
             android:label="@string/title_activity_group_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".group_member"
+            android:label="@string/title_activity_group_member"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
