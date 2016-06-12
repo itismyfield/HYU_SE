@@ -8,4 +8,5 @@
     <string name="title_activity_group_profile">group_profile</string>
     <string name="title_activity_group_home">group_home</string>
     <string name="title_activity_group_member">group_member</string>
+    <string name="title_activity_group_chat">group_chat</string>
 </resources>
