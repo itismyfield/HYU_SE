@@ -37,6 +37,10 @@
         <activity
             android:name=".group_profile"
             android:label="@string/title_activity_group_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".group_home"
+            android:label="@string/title_activity_group_home"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

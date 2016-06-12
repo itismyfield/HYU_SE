@@ -6,4 +6,5 @@
     <string name="title_activity_make_group">MakeGroup</string>
     <string name="title_activity_make_group_2">make_group_2</string>
     <string name="title_activity_group_profile">group_profile</string>
+    <string name="title_activity_group_home">group_home</string>
 </resources>
