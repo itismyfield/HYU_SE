@@ -28,8 +28,10 @@ public class login extends AppCompatActivity implements View.OnClickListener{
         bLogin = (Button) findViewById(R.id.bLogin);
         bLogin = (Button) findViewById(R.id.bJoin);
 
-        bLogin.setOnClickListener(this);
-        bJoin.setOnClickListener(this);
+        Intent intent = getIntent();
+//
+//        bLogin.setOnClickListener(this);
+//        bJoin.setOnClickListener(this);
 
         userLocalStore = new UserLocalStore(this);
 

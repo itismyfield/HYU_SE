@@ -7,13 +7,14 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     Button bNewGroup, bLogout;
     EditText etSearch;
@@ -30,8 +31,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bLogout = (Button) findViewById(R.id.bLogout);
         etSearch = (EditText) findViewById(R.id.etSearch);
 
-        bLogout.setOnClickListener(this);
-        bNewGroup.setOnClickListener(this);
+        bLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, login.class);
+                startActivity(intent);
+            }
+        });
+
+        bNewGroup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, MakeGroup.class);
+                startActivity(intent);
+            }
+        });
 
         userLocalStore = new UserLocalStore(this);
     }
@@ -57,22 +71,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     @Override
-    public void onClick(View v) {
-        switch(v.getId()) {
-            case R.id.bLogout:
-                userLocalStore.clearUserData();
-                userLocalStore.setUserLoggedIn(false);
-
-                startActivity(new Intent(this, login.class));
-
-                break;
-            case R.id.bNewGroup:
-
-                break;
-        }
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -93,4 +91,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return super.onOptionsItemSelected(item);
     }
+
 }
