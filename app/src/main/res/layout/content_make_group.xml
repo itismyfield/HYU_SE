@@ -32,7 +32,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageView"
-            android:src="@drawable/IconPlaceholder"
+            android:src="@drawable/iconplaceholder"
             android:layout_marginLeft="30dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="32dp"
