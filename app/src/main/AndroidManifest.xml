@@ -25,6 +25,30 @@
         <activity
             android:name=".login"
             android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MakeGroup"
+            android:label="@string/title_activity_make_group"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".make_group_2"
+            android:label="@string/title_activity_make_group_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".group_profile"
+            android:label="@string/title_activity_group_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".group_home"
+            android:label="@string/title_activity_group_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".group_member"
+            android:label="@string/title_activity_group_member"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".group_chat"
+            android:label="@string/title_activity_group_chat"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
