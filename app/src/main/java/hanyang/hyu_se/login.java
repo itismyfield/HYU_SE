@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class login extends AppCompatActivity implements View.OnClickListener{
+public class login extends AppCompatActivity{
 
     Button bLogin, bJoin;
     EditText etUsername, etPassword;
@@ -26,31 +26,25 @@ public class login extends AppCompatActivity implements View.OnClickListener{
         etUsername = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
         bLogin = (Button) findViewById(R.id.bLogin);
-        bLogin = (Button) findViewById(R.id.bJoin);
+        bJoin = (Button) findViewById(R.id.bJoin);
 
-        Intent intent = getIntent();
-//
-//        bLogin.setOnClickListener(this);
-//        bJoin.setOnClickListener(this);
+        bLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(login.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        /*bJoin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(login.this, register.class);
+                startActivity(intent);
+            }
+        });*/
 
         userLocalStore = new UserLocalStore(this);
 
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()){
-            case R.id.bLogin:
-                User user = new User(null, null);
-
-                userLocalStore.storeUserData(user);
-                userLocalStore.setUserLoggedIn(true);
-
-                break;
-            case R.id.bJoin:
-                startActivity(new Intent(this, register.class));
-
-                break;
-        }
     }
 }

@@ -1,6 +1,7 @@
 package hanyang.hyu_se;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,12 +14,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity{
 
     Button bNewGroup, bLogout;
     EditText etSearch;
     UserLocalStore userLocalStore;
+    RelativeLayout group1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +33,11 @@ public class MainActivity extends AppCompatActivity{
         bNewGroup = (Button) findViewById(R.id.bNewGroup);
         bLogout = (Button) findViewById(R.id.bLogout);
         etSearch = (EditText) findViewById(R.id.etSearch);
+        group1 = (RelativeLayout) findViewById(R.id.group1);
 
         bLogout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view){
                 Intent intent = new Intent(MainActivity.this, login.class);
                 startActivity(intent);
             }
@@ -43,6 +47,14 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(MainActivity.this, MakeGroup.class);
+                startActivity(intent);
+            }
+        });
+
+        group1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, group_home.class);
                 startActivity(intent);
             }
         });
