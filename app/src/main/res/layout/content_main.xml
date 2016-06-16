@@ -49,18 +49,23 @@
                 android:layout_marginTop="10dp" />
 
             <RelativeLayout
+                android:id="@+id/group1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:clickable="true">
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imageButton"
-                    android:layout_alignParentTop="true"
+                    android:background="#051eac"
+                    android:src="@drawable/icon_placeholder"
+                    android:layout_alignTop="@+id/imageButton2"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:background="#051eac" />
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginStart="29dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -68,16 +73,19 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Joined Group"
                     android:id="@+id/textView7"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imageButton2"
-                    android:layout_alignBottom="@+id/textView7"
+                    android:src="@drawable/icon_placeholder"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="29dp"
+                    android:layout_marginEnd="29dp" />
             </RelativeLayout>
 
             <RelativeLayout
