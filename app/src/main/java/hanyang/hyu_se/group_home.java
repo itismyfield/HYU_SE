@@ -7,11 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class group_home extends AppCompatActivity {
     ListView listView;
     ArrayAdapter<String> adapter;
+    Button chatroom;
 
     String[] groupNotifs = {
             /* insert notifications here */
@@ -27,6 +29,14 @@ public class group_home extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        chatroom = (Button) findViewById(R.id.chatroom);
+
+        chatroom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setIntent(group_home.this, chatroom.class);
+            }
+        });
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
