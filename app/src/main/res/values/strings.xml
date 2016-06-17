@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">Socket.IO Chat Demo</string>
+    <string name="app_name">HYU-SE</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register">register</string>
+    <string name="title_activity_login">login</string>
+    <string name="title_activity_make_group">MakeGroup</string>
+    <string name="title_activity_make_group_2">make_group_2</string>
+    <string name="title_activity_group_profile">group_profile</string>
+    <string name="title_activity_group_home">group_home</string>
+    <string name="title_activity_group_member">group_member</string>
+    <string name="title_activity_group_chat">group_chat</string>
     <string name="action_leave">Leave</string>
     <string name="action_send">Send</string>
     <string name="prompt_message">Message</string>
@@ -19,5 +27,7 @@
     <string name="message_user_joined">%s joined</string>
     <string name="message_user_left">%s left</string>
     <string name="user_action_typing">is typing</string>
+
+
 
 </resources>
