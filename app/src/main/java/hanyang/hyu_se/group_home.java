@@ -13,14 +13,14 @@ import android.widget.ListView;
 public class group_home extends AppCompatActivity {
     ListView listView;
     ArrayAdapter<String> adapter;
-    Button chatroom;
+    Button chatroom, groupMembers;
 
-    String[] groupNotifs = {
-            /* insert notifications here */
-            "Notice 1",
-            "Notice 2",
-            "Notice 3"
-    };
+//    String[] groupNotifs = {
+//            /* insert notifications here */
+//            "Notice 1",
+//            "Notice 2",
+//            "Notice 3"
+//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +30,19 @@ public class group_home extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         chatroom = (Button) findViewById(R.id.chatroom);
+        groupMembers = (Button) findViewById(R.id.groupMembers)
 
         chatroom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setIntent(group_home.this, chatroom.class);
+            }
+        });
+
+        chatroom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setIntent(group_home.this, group_member.class);
             }
         });
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -46,8 +54,8 @@ public class group_home extends AppCompatActivity {
 //            }
 //        });
 
-        listView = (ListView)findViewById(R.id.listView);
-        adapter = new ArrayAdapter<String>(this,R.layout.list_view_custom_layout,R.id.listView,groupNotifs);
+//        listView = (ListView)findViewById(R.id.listView);
+//        adapter = new ArrayAdapter<String>(this,R.layout.list_view_custom_layout,R.id.listView,groupNotifs);
 //        listView.setAdapter(adapter);
     }
 
