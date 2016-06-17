@@ -13,12 +13,12 @@ public class group_member extends AppCompatActivity {
     ListView listView;
     ArrayAdapter<String> adapter;
 
-    String[] groupNotifs = {
-            /* insert member info here */
+    /*String[] groupNotifs = {
+            *//* insert member info here *//*
             "Member 1",
             "Member 2",
             "Member 3"
-    };
+    };*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
