@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity{
         etSearch = (EditText) findViewById(R.id.etSearch);
         group1 = (RelativeLayout) findViewById(R.id.group1);
 
+
         bLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){

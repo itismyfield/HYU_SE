@@ -36,13 +36,13 @@ public class login extends AppCompatActivity{
             }
         });
 
-        /*bJoin.setOnClickListener(new View.OnClickListener() {
+        bJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, register.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         userLocalStore = new UserLocalStore(this);
 
